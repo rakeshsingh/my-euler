@@ -20,3 +20,5 @@ def get_primes(n):
         if is_prime(n):
             yield n
         n = n+1
+        
+

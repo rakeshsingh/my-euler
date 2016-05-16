@@ -3,8 +3,12 @@ import math
 
 def least_common_multiple(n):
     lcm =1
-
+    
     return lcm
+
+def greatest_common_divisor(n):
+    
+    return gcd
 
 def highest_common_factor(n):
     hcf=1

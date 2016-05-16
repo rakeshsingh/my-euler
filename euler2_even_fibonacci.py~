@@ -20,4 +20,4 @@ def sum_of_even_fibonacci(n):
 
 
 if __name__ == '__main__':
-	print(sum_of_even_fibonacci(100))
+	print(sum_of_even_fibonacci(4000000))

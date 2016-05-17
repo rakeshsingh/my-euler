@@ -1,18 +1,33 @@
 #!/usr/bin/python
 import math
+from math import gcd
 
-def least_common_multiple(n):
-    lcm =1
-    return lcm
+def my_gcd(a,b):
+    if a == b or b ==0:
+        return a
+    elif a > b:
+        return gcd(a-b, b)
+    else:
+        return gcd(b-a,a)
 
-def highest_common_factor(n):
-    hcf=1
-    return hcf
+def lcm(a,b):
+    return a*b  // gcd (a, b)
+
+def get_prime_factors(n):
+    '''
+    returns a list of prime factors of a number
+    '''
+    factors=[]
+    for i in get_next_prime(1):
+        if n % i == 0:
+            factors.append(i)
+        if i >n:
+            return factors
 
 def is_prime(n):
     '''
     Check whether a number is prime or not
-    '''    
+    '''
     if n >1:
         if n ==2:
             return True
@@ -36,7 +51,7 @@ def get_primes(n):
         if is_prime(n):
             yield n
         n = n+1
-        
+
 if __name__ == '__main__':
     for i in get_primes(1):
         print(i)

@@ -3,7 +3,6 @@ import math
 
 def least_common_multiple(n):
     lcm =1
-
     return lcm
 
 def highest_common_factor(n):
@@ -35,9 +34,11 @@ def get_next_prime(n):
 def get_primes(n):
     while True:
         if is_prime(n):
-            n= yield n
+            yield n
         n = n+1
         
 if __name__ == '__main__':
-    print(get_next_prime(5))
-    print(get_next_prime(7))
+    for i in get_primes(1):
+        print(i)
+        if i > 100:
+            break

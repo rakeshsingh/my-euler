@@ -3,6 +3,9 @@ import math
 from math import gcd
 
 def my_gcd(a,b):
+    ''' 
+    Retruns gcd for two given numbers
+    '''
     if a == b or b ==0:
         return a
     elif a > b:
@@ -11,6 +14,7 @@ def my_gcd(a,b):
         return gcd(b-a,a)
 
 def lcm(a,b):
+    ''''''
     return a*b  // gcd (a, b)
 
 def get_prime_factors(n):
@@ -52,8 +56,15 @@ def get_primes(n):
             yield n
         n = n+1
 
+def fibonacci_generator():
+    """Fibonacci numbers generator"""
+    a, b = 1, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
 if __name__ == '__main__':
-    for i in get_primes(1):
+    for i in fibonacci_generator():
         print(i)
-        if i > 100:
+        if i > 150:
             break

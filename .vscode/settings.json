@@ -1,6 +1,11 @@
 // Place your settings in this file to overwrite default and user settings.
 {
         "files.autoSave": "afterDelay",
-        "files.autoSaveDelay": 10000
+        "files.autoSaveDelay": 10000,
+        "python.pythonPath": "/Users/raksingh/.venv/euler/bin/python",
+        "python.linting.pylintEnabled": false,
+        "python.linting.pep8Enabled": false,
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true
 
 }
